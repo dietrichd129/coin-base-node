@@ -13,7 +13,7 @@ router.get('/checkout', async (ctx, next) => {
 	let params = ctx.query || {}
 	
 
-	if (params && params.total && params.count) {
+	if (params && params.total && params.name) {
 		return ctx.body = await checkout(params)
 	}
 

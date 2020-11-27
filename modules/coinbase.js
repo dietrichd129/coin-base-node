@@ -8,10 +8,14 @@ const db = require ('./db')
 const Client = coinbase.Client.init('5c0d9cd6-bbd0-4255-9aee-2254a602dda4')
 const Charge = coinbase.resources.Charge
 
-const checkout = async ({ total, count }) => {
+const checkout = async ({ total, name }) => {
 	const chargeObj = new Charge({
-		'name': 'Monthly subscription',
-		'description': `Payment for services for ${count} months`,
+		'name': 'Crypto Payment Strapsessions',
+		'description': 'Strapsessions Checkout|| Contact support@strapsessions.com incase of difficulties',
+		'logo_url': 'https://pixabay.com/get/54e6d14a4e4faa0df7c5997cc128317a1c39daec56_640.png',
+		'metadata': {
+			'customer_name': `${name}`
+		},
 		'local_price': {
 			'amount': total,
 			'currency': 'USD'
