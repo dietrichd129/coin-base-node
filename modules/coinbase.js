@@ -5,7 +5,7 @@
 const coinbase = require ('coinbase-commerce-node')
 const db = require ('./db')
 
-const Client = coinbase.Client.init('5c0d9cd6-bbd0-4255-9aee-2254a602dda4')
+const Client = coinbase.Client.init('853752f0-b042-4498-a56e-8fff756c6fab')
 const Charge = coinbase.resources.Charge
 
 const checkout = async ({ total, name }) => {
